@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Students | VAMOS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="header.css" />
+
+  <style>
+    main {
+      max-width: 1100px;
+      margin: 15px auto;
+      padding: 0 20px;
+    }
+
+    /* ===================== TABS ===================== */
+    .tabs {
+      display: flex;
+      gap: 15px;
+      margin: 20px 0 10px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      padding: 8px 18px;
+      background: #e8f5f3;
+      border-radius: 18px;
+      color: #004d40;
+      font-weight: 600;
+      cursor: pointer;
+      border: 2px solid #004d40;
+      transition: 0.25s;
+    }
+
+    .tab-btn.active {
+      background: #004d40;
+      color: #fff;
+    }
+
+    .tab-btn:hover {
+      background: #00796b;
+      color: #fff;
+    }
+
+    /* ===================== GRID ===================== */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    /* ===================== CARD ===================== */
+    .team-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: 0.25s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    .team-card img {
+      width: 130px;
+      height: 130px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .team-card h3 {
+      color: #004d40;
+      font-size: 1.05rem;
+      margin: 6px 0;
+      font-weight: 700;
+    }
+
+    .team-card p {
+      color: #555;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      margin: 2px 0 5px 0;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    footer {
+      margin-top: 20px !important;
+    }
+  </style>
+
+  <script>
+    function switchTab(tabName) {
+      // Hide all groups
+      document.querySelectorAll(".student-group").forEach(g => g.classList.add("hidden"));
+      // Show selected group
+      document.getElementById(tabName).classList.remove("hidden");
+
+      // Update active tab
+      document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+      document.getElementById("btn-" + tabName).classList.add("active");
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- ===== Header ===== -->
+  <header>
+    <div class="header-container">
+
+      <div class="header-title-row">
+        <img src="images/logo_up.png" class="logo" alt="Group Logo" />
+        <h1>Vegetation And Environment Remote Sensing</h1>
+      </div>
+
+      <h1 class="vamos-line"><strong>VAMOS</strong></h1>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="students.html" class="active">Students</a>
+        <a href="publications.html">Publications</a>
+        <a href="contact.html">Join us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Main ===== -->
+  <main>
+
+    <h2 class="section-title">Our Students</h2>
+
+    <!-- ===== TAB BUTTONS ===== -->
+    <div class="tabs">
+      <div class="tab-btn active" id="btn-phd" onclick="switchTab('phd')">Postdocs and PhD Candidates</div>
+      <div class="tab-btn" id="btn-master" onclick="switchTab('master')">Master Students</div>
+      <div class="tab-btn" id="btn-undergrad" onclick="switchTab('undergrad')">Undergraduates</div>
+      <div class="tab-btn" id="btn-visiting" onclick="switchTab('visiting')">Visiting Students</div>
+      <div class="tab-btn" id="btn-alumni" onclick="switchTab('alumni')">Alumni</div>
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- ===================== PHD STUDENTS =================== -->
+    <!-- ===================================================== -->
+    <div class="student-group" id="phd">
+
+      <div class="team-grid">
+
+         <div class="team-card">
+          <a href="members/PhDs/guo_chenhui.html">
+            <img src="images/team/PhDs/guo_chenhui.png" />
+            <h3>Chenhui Guo (2025)</h3>
+            <p>SIF · plant physiology</p>
+          </a>
+        </div>
+
+        <div class="team-card">
+          <a href="members/PhDs/lu_xuhui.html">
+            <img src="images/team/PhDs/lu_xuhui.jpg" />
+            <h3>Xuhui Lu (2020)</h3>
+            <p>SIF · plant physiology</p>
+          </a>
+        </div>
+
+        <div class="team-card">
+          <a href="members/PhDs/shi_siqi.html">
+            <img src="images/team/PhDs/shi_siqi.jpg" />
+            <h3>Siqi Shi (2021)</h3>
+            <p>Phenology · vegetation RS</p>
+          </a>
+        </div>
+
+        <div class="team-card">
+          <a href="members/PhDs/wang_ziyang.html">
+            <img src="images/team/PhDs/wang_ziyang.jpg" />
+            <h3>Ziyang Wang (2022)</h3>
+            <p>LiDAR signal interpretation</p>
+          </a>
+        </div>
+
+        <div class="team-card">
+          <a href="members/PhDs/zhang_runfei.html">
+            <img src="images/team/PhDs/zhang_runfei.jpg" />
+            <h3>Runfei Zhang (2023)</h3>
+            <p>Leaf chlorophyll content analysis</p>
+          </a>
+        </div>
+
+        <div class="team-card">
+          <a href="members/PhDs/han_dalei.html">
+            <img src="images/team/PhDs/han_dalei.jpg" />
+            <h3>Dalei Han (2024)</h3>
+            <p>Radiative transfer modeling</p>
+          </a>
+        </div>
+
+
+
+        <div class="team-card">
+          <a href="members/PhDs/jiang_hao.html">
+            <img src="images/team/PhDs/jiang_hao.png" />
+            <h3>Hao Jiang (2024)</h3>
+            <p>SIF · physiology · drought</p>
+          </a>
+        </div>
+
+        <div class="team-card">
+          <a href="members/PhDs/li_jie.html">
+            <img src="images/team/PhDs/li_jie.jpg" />
+            <h3>Jie Li (2025)</h3>
+            <p>Quantitative vegetation RS</p>
+          </a>
+        </div>
+
+        <div class="team-card">
+          <a href="members/PhDs/huang_xiaoshuang.html">
+            <img src="images/team/PhDs/huang_xiaoshuang.jpg" />
+            <h3>Xiaoshuang Huang (2025)</h3>
+            <p>Global Fire Analysis</p>
+          </a>
+        </div>
+
+        <div class="team-card">
+          <a href="members/PhDs/guo_xianan.html">
+            <img src="images/team/PhDs/guo_xianan.jpg" />
+            <h3>Xianan Guo (2025)</h3>
+            <p>RT modeling · vegetation</p>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- ===================== MASTER ========================= -->
+    <!-- ===================================================== -->
+    <div class="student-group hidden" id="master">
+    <p style="color:#666; margin:10px 0;"></p>
+    
+    
+    <div class="team-grid"> 
+
+         <div class="team-card">
+            <a href="members/Master Students/gong_yunxiao(1)(1).html">
+                <img src="images/team/Master Students/gong_yunxiao.jpg" />
+                <h3>Yunxiao Gong(2023)</h3>
+                <p>  Global Fire Analysis</p>
+            </a>
+        </div> 
+      <div class="team-card">
+            <a href="members/Master Students/xu_yulong.html">
+                <img src="images/team/Master Students/xu_yulong.jpg" />
+                <h3>Yulong Xu(2023)</h3>
+                <p>Vegetation phenology monitoring</p>
+            </a>
+        </div>
+
+      <div class="team-card">
+            <a href="members/Master Students/liu_quanxing.html">
+                <img src="images/team/Master Students/liu_quanxin.jpg" />
+                <h3>Quanxing Liu(2023)</h3>
+                <p>Xanthophyll Cycle Remote Sensing</p>
+            </a>
+        </div>
+
+        <div class="team-card">
+            <a href="members/Master Students/xie_yingyi.html">
+                <img src="images/team/Master Students/xie_yingyi.jpg" />
+                <h3>Yingyi Xie(2023)</h3>
+                <p>Urban remote sensing</p>
+            </a>
+        </div>
+        <div class="team-card">
+            <a href="members/Master Students/zhang_zhiqiang.html">
+                <img src="images/team/Master Students/zhang_zhiqiang.jpg" />
+                <h3>Zhiqiang_Zhang(2023)</h3>
+                <p>Building height extraction</p>
+            </a>
+        </div>
+
+        <div class="team-card">
+            <a href="members/Master Students/wu_shuqi.html">
+                <img src="images/team/Master Students/wu_shuqi.jpg" />
+                <h3>Shuqi Wu(2023)</h3>
+                <p>Forest vegetation monitoring</p>
+            </a>
+        </div>
+
+        <div class="team-card">
+            <a href="members/Master Students/yang_peiyan.html">
+                <img src="images/team/Master Students/yang_peiyan.jpg" />
+                <h3>Peiyan Yang (2024)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div>
+        <div class="team-card">
+            <a href="members/Master Students/lu_leyuan.html">
+                <img src="images/team/Master Students/lu_leyuan.jpg" />
+                <h3>Leyuan Lu (2024)</h3>
+                <p> LiDAR Remote Sensing</p>
+            </a>
+        </div>
+        <div class="team-card">
+            <a href="members/Master Students/xie_ying.html">
+                <img src="images/team/Master Students/xie_ying.jpg" />
+                <h3>Ying Xie(2024)</h3>
+                <p>LiDAR Remote Sensing</p>
+            </a>
+        </div>
+        <div class="team-card">
+            <a href="members/Master Students/li_zuoqin.html">
+                <img src="images/team/Master Students/li_zuoqin.jpg" />
+                <h3>Zuoqin Li(2024)</h3>
+                <p> Forest Wildfire</p>
+            </a>
+        </div>
+        <div class="team-card">
+            <a href="members/Master Students/shi_zichen.html">
+                <img src="images/team/Master Students/shi_zichen.jpg" />
+                <h3>Zichen Shi(2024)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div>
+
+         <div class="team-card">
+            <a href="members/Master Students/tian_ye.html">
+                <img src="images/team/Master Students/tian_ye.jpg" />
+                <h3>Ye Tian(2024)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div>
+
+        <div class="team-card">
+            <a href="members/Master Students/yang_kairan.html">
+                <img src="images/team/Master Students/yang_kairan.jpg" />
+                <h3>Kairan Yang (2025)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div>
+        <div class="team-card">
+            <a href="members/Master Students/cui_xuan.html">
+                <img src="images/team/Master Students/cui_xuan.jpg" />
+                <h3>Xuan Cui (2025)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div>
+        <div class="team-card">
+            <a href="members/Master Students/cao_zini(1).html">
+                <img src="images/team/Master Students/cao_zini.jpg" />
+                <h3>Zini Cao (2025)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div>
+        <div class="team-card">
+            <a href="members/Master Students/wu_wenbo.html">
+                <img src="images/team/Master Students/wu_wenbo.jpg" />
+                <h3>Wenbo Wu (2025)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div>
+        <div class="team-card">
+            <a href="members/Master Students/wang_xindi.html">
+                <img src="images/team/Master Students/wang_xindi.jpg" />
+                <h3>Xindi Wang (2025)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div>
+        <div class="team-card">
+            <a href="members/Master Students/zhang_mengling.html">
+                <img src="images/team/Master Students/zhang_mengling.jpg" />
+                <h3>Mengling Zhang(2025)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div>
+        <div class="team-card">
+            <a href="members/Master Students/xu_xinjie.html">
+                <img src="images/team/Master Students/xu_xinjie.jpg" />
+                <h3>Xinjie Xu(2025)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div>
+        
+    </div> 
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- ===================== UNDERGRADS ===================== -->
+    <!-- ===================================================== -->
+    <div class="student-group hidden" id="undergrad">
+  <p style="color:#666; margin:10px 0;"></p>
+  <div class="team-grid">
+
+        <div class="team-card">
+      <a href="members/undergraduates/dou_chunyu.html">
+        <img src="images/team/undergraduates/dou_chunyu.png" />
+        <h3>Chunyu Dou(2022)</h3>
+        <p>Vegetation Remote Sensing</p>
+      </a>
+    </div>
+
+    <div class="team-card">
+      <a href="members/undergraduates/deng_sijie.html">
+        <img src="images/team/undergraduates/deng_sijie.png" />
+        <h3>Sijie Deng(2025)</h3>
+        <p>Vegetation Remote Sensing</p>
+      </a>
+    </div>
+
+
+
+  </div> <!-- team-grid -->
+</div> <!-- undergrad -->
+
+
+    <!-- ===================================================== -->
+    <!-- ===================== VISITING ======================= -->
+    <!-- ===================================================== -->
+ <div class="student-group hidden" id="visiting">
+    <p style="color:#666; margin:10px 0;"></p>
+    <div class="team-grid"> 
+        <div class="team-card">
+            <a href="members/visiting students/EglantineBrault.html">
+                <img src="images/team/visiting students/EglantineBrault.png" />
+                <h3>Eglantine Brault(2025.04-2025.06)</h3>
+                <p>Vegetation Biophysical Properties</p>
+            </a>
+        </div> 
+    </div>
+</div>
+
+
+    <!-- ===================================================== -->
+    <!-- ===================== ALUMNI ========================= -->
+    <!-- ===================================================== -->
+    <div class="student-group hidden" id="alumni">
+      <p style="color:#666; margin:10px 0;">.</p>
+     <div class="team-grid"> 
+
+        <div class="team-card">
+            <a href="members/Alumni/liu_xianwei.html">
+                <img src="images/team/Alumni/liu_xianwei.png" />
+                <h3>Xianwei Liu(2020-2023)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div> 
+
+          <div class="team-card">
+            <a href="members/Alumni/zhang_ya.html">
+                <img src="images/team/Alumni/zhang_ya.png" />
+                <h3>Ya Zhang(2020-2023)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div> 
+
+          <div class="team-card">
+            <a href="members/Alumni/wang_jinyue.html">
+                <img src="images/team/Alumni/wang_jinyue.png" />
+                <h3>Jinyue Wang(2021-2024)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div> 
+
+           <div class="team-card">
+            <a href="members/Alumni/he_zhipeng.html">
+                <img src="images/team/Alumni/he_zhipeng.png" />
+                <h3>Zhipeng He(2021-2024)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div> 
+
+         <div class="team-card">
+            <a href="members/Alumni/wang_xia.html">
+                <img src="images/team/Alumni/wang_xia.png" />
+                <h3>Xia Wang(2021-2024)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div> 
+
+          <div class="team-card">
+            <a href="members/Alumni/wang_caihong.html">
+                <img src="images/team/Alumni/wang_caihong.png" />
+                <h3>Caihong Wang(2021-2024)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div> 
+
+
+         <div class="team-card">
+            <a href="members/Alumni/guo_tingrui.html">
+                <img src="images/team/Alumni/guo_tingrui.png" />
+                <h3>Tingrui Guo(2022-2025)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div> 
+
+         <div class="team-card">
+            <a href="members/Alumni/zheng_xin.html">
+                <img src="images/team/Alumni/zheng_xin.png" />
+                <h3>Xin Zheng(2022-2025)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div> 
+
+          <div class="team-card">
+            <a href="members/Alumni/liu_siya.html">
+                <img src="images/team/Alumni/liu_siya.png" />
+                <h3>Siya Liu(2022-2025)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div> 
+
+        <div class="team-card">
+            <a href="members/Alumni/lv_peixian.html">
+                <img src="images/team/Alumni/lv_peixian.png" />
+                <h3>Peixian_Lü(2023-2025)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div> 
+
+      
+
+        <div class="team-card">
+            <a href="members/Alumni/chen_shaoyang.html">
+                <img src="images/team/Alumni/chen_shaoyang.png" />
+                <h3>Shaoyang Chen(2023-2025)</h3>
+                <p>Vegetation Remote Sensing</p>
+            </a>
+        </div> 
+
+        
+    </div>
+    <div></div>
+    <div>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <img src="images/logo.jpg" alt="Group Logo" class="footer-logo" />
+    <br />
+    © 2025 VAMOS Group | Nanjing Normal University
+  </footer>
+
+</body>
+
+</html>

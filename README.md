@@ -1,1 +1,1 @@
-# vamos.labweb
+# academic-scholar-website
